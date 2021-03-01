@@ -884,16 +884,16 @@ header {
 
 .logo-wolve {
   fill: transparent;
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
   font-size: 200px;
-  -webkit-animation: logo-wolv 6s ease infinite alternate;
-          animation: logo-wolv 6s ease infinite alternate;
+  -webkit-animation: logo-wolv 2s ease infinite alternate;
+          animation: logo-wolv 2s ease infinite alternate;
 }
 
 .logo {
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
   -webkit-transform-origin: center center;
           transform-origin: center center;
   transform-box: fill-box;
@@ -939,23 +939,23 @@ header {
 }
 
 .line1 {
-  -webkit-animation: line 3s ease infinite alternate;
-          animation: line 3s ease infinite alternate;
+  -webkit-animation: line 2s ease infinite alternate;
+          animation: line 2s ease infinite alternate;
 }
 
 .line2 {
-  -webkit-animation: line 4s ease .7s infinite alternate;
-          animation: line 4s ease .7s infinite alternate;
+  -webkit-animation: line 2s ease .3s infinite alternate;
+          animation: line 2s ease .3s infinite alternate;
 }
 
 .line3 {
-  -webkit-animation: line 6s ease 2s infinite alternate;
-          animation: line 6s ease 2s infinite alternate;
+  -webkit-animation: line 2s ease 2s infinite alternate;
+          animation: line 2s ease 2s infinite alternate;
 }
 
 .line4 {
-  -webkit-animation: line 5s ease infinite alternate;
-          animation: line 5s ease infinite alternate;
+  -webkit-animation: line 2s ease infinite alternate;
+          animation: line 2s ease infinite alternate;
 }
 
 @-webkit-keyframes line {
