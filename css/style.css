@@ -460,8 +460,8 @@ p {
   height: 60px;
   border-radius: 50%;
   background-color: #feef97;
-  -webkit-animation: pulse 3s linear infinite;
-          animation: pulse 3s linear infinite;
+  -webkit-animation: pulse 1s linear infinite;
+          animation: pulse 1s linear infinite;
 }
 
 @-webkit-keyframes pulse {
@@ -884,11 +884,9 @@ header {
 
 .logo-wolve {
   fill: transparent;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
   font-size: 200px;
-  -webkit-animation: logo-wolv 2s ease infinite alternate;
-          animation: logo-wolv 2s ease infinite alternate;
+  -webkit-animation: slide-out-fwd-center 3s cubic-bezier(0.6, -0.28, 0.735, 0.045) 2s both;
+  animation: slide-out-fwd-center 3s cubic-bezier(0.6, -0.28, 0.735, 0.045) 2s both;
 }
 
 .logo {
@@ -906,77 +904,81 @@ header {
 
 @-webkit-keyframes logo-wolve {
   0% {
-    stroke-width: 0;
-    stroke-dasharray: 1 100;
-    fill: transparent;
+    -webkit-transform: translateZ(1);
+    transform: translateZ(1);
+    opacity: 1;
   }
-  25% {
-    stroke-width: 0.3;
-    stroke-dasharray: 100 0;
-    fill: transparent;
-  }
-  60%, 100% {
-    stroke-width: 0;
-    fill: #857439;
+  100% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(500px);
+    opacity: 0;
   }
 }
 
 @keyframes logo-wolve {
   0% {
-    stroke-width: 0;
-    stroke-dasharray: 1 100;
-    fill: transparent;
-  }
-  25% {
-    stroke-width: 0.3;
-    stroke-dasharray: 100 0;
-    fill: transparent;
-  }
-  60%, 100% {
-    stroke-width: 0;
-    fill: #857439;
-  }
-}
-
-.line1 {
-  -webkit-animation: line 2s ease infinite alternate;
-          animation: line 2s ease infinite alternate;
-}
-
-.line2 {
-  -webkit-animation: line 2s ease .3s infinite alternate;
-          animation: line 2s ease .3s infinite alternate;
-}
-
-.line3 {
-  -webkit-animation: line 2s ease 2s infinite alternate;
-          animation: line 2s ease 2s infinite alternate;
-}
-
-.line4 {
-  -webkit-animation: line 2s ease infinite alternate;
-          animation: line 2s ease infinite alternate;
-}
-
-@-webkit-keyframes line {
-  0% {
-    stroke-dasharray: 200 50;
-    stroke-dashoffset: 0;
+    -webkit-transform: translateZ(1);
+    transform: translateZ(1);
+    opacity: 1;
   }
   100% {
-    stroke-dasharray: 500 5;
-    stroke-dashoffset: 1000;
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(500px);
+    opacity: 0;
   }
 }
 
-@keyframes line {
+@-webkit-keyframes slide-out-fwd-center {
   0% {
-    stroke-dasharray: 200 50;
-    stroke-dashoffset: 0;
+    -webkit-transform: translateZ(1);
+    transform: translateZ(1);
+    opacity: 1;
   }
   100% {
-    stroke-dasharray: 500 5;
-    stroke-dashoffset: 1000;
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
   }
 }
+
+@keyframes slide-out-fwd-center {
+  0% {
+    -webkit-transform: translateZ(1);
+    transform: translateZ(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+}
+
+/*
+.line1{
+    animation: line 2s ease infinite alternate;
+}
+
+.line2{
+    animation: line 2s ease .3s infinite alternate;
+}
+
+.line3{
+    animation: line 2s ease 2s infinite alternate;
+}
+
+.line4{
+    animation: line 2s ease infinite alternate;
+}
+
+@keyframes line{
+    0%{
+        stroke-dasharray: 200 50;
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dasharray: 500 5;
+        stroke-dashoffset: 1000;
+    }
+}*/
 /*# sourceMappingURL=style.css.map */

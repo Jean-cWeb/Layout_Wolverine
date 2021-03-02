@@ -1,10 +1,9 @@
 .logo-wolve{
     fill: transparent;
-    transition: .2s ease;
     font-size: 200px;
 
-    animation: logo-wolv 2s ease infinite alternate;
-
+    -webkit-animation: slide-out-fwd-center 3s cubic-bezier(0.600, -0.280, 0.735, 0.045) 2s both;
+	        animation: slide-out-fwd-center 3s cubic-bezier(0.600, -0.280, 0.735, 0.045) 2s both;
 }
 
 .logo{
@@ -16,23 +15,34 @@
     }
 }
 
-@keyframes logo-wolve{
-    0%{
-        stroke-width: 0;
-        stroke-dasharray: 1 100;
-        fill: transparent;
+@keyframes logo-wolve {
+    0% {
+        -webkit-transform: translateZ(1);
+                transform: translateZ(1);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateZ(600px);
+                transform: translateZ(500px);
+        opacity: 0;
+      }
     }
-    25%{
-        stroke-width: 0.3;
-        stroke-dasharray: 100 0;
-        fill: transparent;
+    @keyframes slide-out-fwd-center {
+      0% {
+        -webkit-transform: translateZ(1);
+                transform: translateZ(1);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateZ(600px);
+                transform: translateZ(600px);
+        opacity: 0;
+      }
     }
-    60%,100%{
-        stroke-width: 0;
-        fill: $yellow-dark;
-    }
-}
+    
+    
 
+/*
 .line1{
     animation: line 2s ease infinite alternate;
 }
@@ -58,4 +68,4 @@
         stroke-dasharray: 500 5;
         stroke-dashoffset: 1000;
     }
-}
+}*/
